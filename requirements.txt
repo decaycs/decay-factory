@@ -1,2 +1,0 @@
-rich==9.8.2
-image-go-nord==0.1.3

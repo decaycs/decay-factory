@@ -36,7 +36,7 @@ def main():
 # Gets the file path from the Argument
 def fromCommandArgument(console):
     command_parser = argparse.ArgumentParser(
-        description="A simple cli to manufacture gruvbox themed wallpapers."
+        description="A simple cli to manufacture nord themed wallpapers."
     )
     command_parser.add_argument(
         "Path", metavar="path", nargs="+", type=str, help="The path(s) to the image(s)."
@@ -68,18 +68,18 @@ def process_image(image_path, console, gruvbox_factory):
 
     # TODO: might be a better idea to save the new Image in the same directory the command is being run from
     save_path = os.path.join(
-        os.path.dirname(image_path), "gruvbox_" + os.path.basename(image_path)
+        os.path.dirname(image_path), "nord_" + os.path.basename(image_path)
     )
 
     gruvbox_factory.convert_image(image, save_path=(save_path))
     console.print(f"✅ [bold green]Done![/] [green](saved at '{save_path}')[/]")
 
 def add_gruvbox_palette(gruvbox_factory):
-    current_path = Path(__file__).parent.absolute()
 
-    with open(str(current_path) + '/gruvbox.txt', 'r') as f:
-        for line in f.readlines():
-            gruvbox_factory.add_color_to_palette(line[:-1])
+    colorPalette = ["#2E3440","#3B4252","#434C5E","#4C566A","#D8DEE9","#E5E9F0","#ECEFF4","#8FBCBB","#88C0D0","#81A1C1","#5E81AC","#BF616A","#D08770","#EBCB8B","#A3BE8C","#B48EAD"]
+
+    for color in colorPalette:
+        gruvbox_factory.add_color_to_palette(color)
 
 ## handle CTRL + C
 def signal_handler(signal, frame):
