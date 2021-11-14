@@ -14,9 +14,9 @@ def main():
     signal.signal(signal.SIGINT, signal_handler)
     console = Console()
 
-    gruvbox_factory = GoNord()
-    gruvbox_factory.reset_palette()
-    add_gruvbox_palette(gruvbox_factory)
+    tn_factory = GoNord()
+    tn_factory.reset_palette()
+    add_tn_palette(tn_factory)
 
     # Checks if there's an argument
     if len(sys.argv) > 1:
@@ -26,7 +26,7 @@ def main():
 
     for image_path in image_paths:
         if os.path.isfile(image_path):
-            process_image(image_path, console, gruvbox_factory)
+            process_image(image_path, console, tn_factory)
         else:
             console.print(
                 f"❌ [red]We had a problem in the pipeline! \nThe image at '{image_path}' could not be found! \nSkipping... [/]"
@@ -36,7 +36,7 @@ def main():
 # Gets the file path from the Argument
 def fromCommandArgument(console):
     command_parser = argparse.ArgumentParser(
-        description="A simple cli to manufacture nord themed wallpapers."
+        description="A simple cli to manufacture Tokyo Night themed wallpapers."
     )
     command_parser.add_argument(
         "Path", metavar="path", nargs="+", type=str, help="The path(s) to the image(s)."
@@ -50,7 +50,7 @@ def fromTui(console):
 
     console.print(
         Panel(
-            "🏭 [bold green] Gruvbox Factory [/] 🏭", expand=False, border_style="yellow"
+            "🏭 [bold magenta] Tokyo-Night Factory [/] 🏭", expand=False, border_style="magenta"
         )
     )
 
@@ -61,25 +61,25 @@ def fromTui(console):
         ).split()
     ]
 
-def process_image(image_path, console, gruvbox_factory):
-    image = gruvbox_factory.open_image(image_path)
-
-    console.print(f"🔨 [yellow]manufacturing '{os.path.basename(image_path)}'...[/]")
+def process_image(image_path, console, tn_factory):
+    image = tn_factory.open_image(image_path)
+    
+    console.print(f"🔨 [blue]manufacturing '{os.path.basename(image_path)}'...[/]")
 
     # TODO: might be a better idea to save the new Image in the same directory the command is being run from
     save_path = os.path.join(
-        os.path.dirname(image_path), "nord_" + os.path.basename(image_path)
+        os.path.dirname(image_path), "tn_" + os.path.basename(image_path)
     )
 
-    gruvbox_factory.convert_image(image, save_path=(save_path))
+    tn_factory.convert_image(image, save_path=(save_path))
     console.print(f"✅ [bold green]Done![/] [green](saved at '{save_path}')[/]")
 
-def add_gruvbox_palette(gruvbox_factory):
+def add_tn_palette(tn_factory):
 
-    colorPalette = ["#2E3440","#3B4252","#434C5E","#4C566A","#D8DEE9","#E5E9F0","#ECEFF4","#8FBCBB","#88C0D0","#81A1C1","#5E81AC","#BF616A","#D08770","#EBCB8B","#A3BE8C","#B48EAD"]
+    tnPalette = ["#16161E","#1a1b26","#24283b","#414868","#565f89","#cfc9c2","#9aa5ce","#a9b1d6","#c0caf5","#bb9af7","#7aa2f7","#7dcfff","#2ac3de","#b4f9f8","#9ece6a","#e0af68","#ff9e64","#f7768e"]
 
-    for color in colorPalette:
-        gruvbox_factory.add_color_to_palette(color)
+    for color in tnPalette:
+        tn_factory.add_color_to_palette(color)
 
 ## handle CTRL + C
 def signal_handler(signal, frame):
