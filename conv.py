@@ -1,3 +1,4 @@
+#!/bin/python
 import signal
 import argparse
 import sys

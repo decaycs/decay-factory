@@ -11,10 +11,15 @@ A simple cli to convert any image to a onedark themed wallpaper
 ```
 pip3 install rich image-go-nord argparse
 ```
-## Usage
-Go to the directory containing the `conv.py` script and run it using:
+3. Go to the directory containing the `conv.py` and run the command below:
 ```
-python3 conv.py
+sudo make install
+```
+
+## Usage
+from your terminal run:
+```
+odf
 ```
 
  Then follow the on-screen instructions, and voila you'll have your onedark themed image ready in no time!
