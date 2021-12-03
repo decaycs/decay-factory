@@ -1,4 +1,4 @@
-# 🗼OnrDark Factory 🏭
+# 🗼OneDark Factory 🏭
 Forked from [tokyo-night-factory](https://github.com/rototrash/tokyo-night-factory) 😄
 
 A simple cli to convert any image to a onedark themed wallpaper
