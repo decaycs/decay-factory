@@ -10,6 +10,9 @@ from ImageGoNord import GoNord
 from rich.console import Console
 from rich.panel import Panel
 
+# CHANGE pirate TO YOUR OWN USER NAME, DO NOT CHANGE THE DIRECTORY ITSELF
+mypath="/home/pirate/Pictures/odf/"
+
 def main():
 
     signal.signal(signal.SIGINT, signal_handler)
@@ -69,7 +72,7 @@ def process_image(image_path, console, od_factory):
 
     # TODO: might be a better idea to save the new Image in the same directory the command is being run from
     save_path = os.path.join(
-        os.path.dirname(image_path), "od_" + os.path.basename(image_path)
+        mypath, "od_" + os.path.basename(image_path)
     )
 
     od_factory.convert_image(image, save_path=(save_path))
