@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -d /home/$USER/Pictures/odt ]]; then
+if [[ -d /home/$USER/Pictures/odf ]]; then
   echo "AWESOME! dir [~/Pictures/odt/] already exists."
 else
   mkdir /home/$USER/Pictures/odf
