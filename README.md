@@ -27,7 +27,7 @@ or
 odf /path/to/image/
 ```
 
- All the outputs will be in ~/Pictures/odt
+ All the outputs will be in ~/Pictures/odf
 
  ## UNINSTALL
  1. ```cd``` into the repo folder.
