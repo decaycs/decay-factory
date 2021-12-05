@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/env python3
 import signal
 import argparse
 import sys
