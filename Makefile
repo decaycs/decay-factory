@@ -1,16 +1,16 @@
 PREFIX = /usr
 
 all:
-	@echo Run \'make install\' to install odf.
+	@echo Run \'make install\' to install catFactory.
 
 install:
 	@mkdir -p $(DESTDIR)$(PREFIX)/bin
-	@cp -p odf.sh $(DESTDIR)$(PREFIX)/bin/odf
-	@chmod 755 $(DESTDIR)$(PREFIX)/bin/odf
-	@cp -p conv.py $(DESTDIR)$(PREFIX)/bin/odfpy
-	@chmod 755 $(DESTDIR)$(PREFIX)/bin/odfpy
+	@cp -p cat.sh $(DESTDIR)$(PREFIX)/bin/catFactory
+	@chmod 755 $(DESTDIR)$(PREFIX)/bin/catFactory
+	@cp -p conv.py $(DESTDIR)$(PREFIX)/bin/catFactorypy
+	@chmod 755 $(DESTDIR)$(PREFIX)/bin/catFactorypy
 
 
 uninstall:
-	@rm -rf $(DESTDIR)$(PREFIX)/bin/odf
-	@rm -rf $(DESTDIR)$(PREFIX)/bin/odfpy
+	@rm -rf $(DESTDIR)$(PREFIX)/bin/catFactory
+	@rm -rf $(DESTDIR)$(PREFIX)/bin/catFactory
