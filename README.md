@@ -1,7 +1,7 @@
 # 🗼Catppuccin Factory 🏭
 Forked from [tokyo-night-factory](https://github.com/rototrash/tokyo-night-factory) 😄
 
-A simple cli to convert any image to a onedark themed wallpaper
+A simple cli to convert any image to a catppuccin themed wallpaper
 
 ![example](./example.png)
 
@@ -11,7 +11,7 @@ A simple cli to convert any image to a onedark themed wallpaper
 ```
 pip3 install rich image-go-nord argparse
 ```
-3. Edit the file ```conv.py``` line 14 with your user name, DO NOT CHANGE THE DIR, IT WILL NOT WORK AS EXPECTED, IF YOU WANT TO EDIT IT THEN DO IT IN BOTH ```conv.py``` and ```odf.sh```.
+3. Edit the file ```conv.py``` line 14 with your user name, DO NOT CHANGE THE DIR, IT WILL NOT WORK AS EXPECTED, IF YOU WANT TO EDIT IT THEN DO IT IN BOTH ```conv.py``` and ```cat.sh```.
 4. Install it with:
 ```
 sudo make install
