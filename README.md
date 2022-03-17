@@ -20,14 +20,14 @@ sudo make install
 ## Usage
 from your terminal run:
 ```
-odf
+catFactory
 ```
 or
 ```
-odf /path/to/image/
+catFactory /path/to/image/
 ```
 
- All the outputs will be in ~/Pictures/odf
+ All the outputs will be in ~/Pictures/cat
 
  ## UNINSTALL
  1. ```cd``` into the repo folder.

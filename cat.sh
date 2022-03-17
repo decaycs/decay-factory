@@ -1,14 +1,14 @@
 #!/bin/bash
 
-if [[ -d /home/$USER/Pictures/odf ]]; then
+if [[ -d /home/$USER/Pictures/cat ]]; then
   echo "AWESOME! dir [~/Pictures/cat/] already exists."
 else
-  mkdir /home/$USER/Pictures/odf
+  mkdir /home/$USER/Pictures/cat
   echo "dir [~/Pictures/cat/] has been created successfully!"
 fi
 
 if [[ -z $1 ]]; then
-  catpy
+  catFactorypy
 else
-  catpy $1
+  catFactorypy $1
 fi
