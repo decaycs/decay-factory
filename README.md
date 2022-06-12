@@ -2,7 +2,9 @@
 
 A simple cli to convert any image to a Decay themed wallpaper
 
-![example](./example.png)
+![example1](./1.jpg)
+![example2](./2.jpg)
+decay on the right.
 
 ## Installation
 1. Clone the repo.
