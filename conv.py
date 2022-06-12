@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
+
 import signal
 import argparse
 import sys
 import os
+
 from pathlib import Path
-
 from ImageGoNord import GoNord
-
 from rich.console import Console
 from rich.panel import Panel
 
-# CHANGE "faaris" TO YOUR OWN USER NAME, DO NOT CHANGE THE DIRECTORY ITSELF
-mypath="/home/faaris/Pictures/decay/"
+mypath=str((Path(os.path.expanduser('~')) / 'Pictures' / 'decay').absolute())
+
 
 def main():
-
     signal.signal(signal.SIGINT, signal_handler)
     console = Console()
 
@@ -37,6 +36,7 @@ def main():
             )
             continue
 
+
 # Gets the file path from the Argument
 def fromCommandArgument(console):
     command_parser = argparse.ArgumentParser(
@@ -49,9 +49,9 @@ def fromCommandArgument(console):
 
     return args.Path
 
+
 # Gets the file path from user input
 def fromTui(console):
-
     console.print(
         Panel(
             "🏭 [bold magenta] Decay Factory [/] 🏭", expand=False, border_style="magenta"
@@ -64,6 +64,7 @@ def fromTui(console):
             "🖼️ [bold yellow]Which image(s) do you want to manufacture? (image paths separated by spaces):[/] "
         ).split()
     ]
+
 
 def process_image(image_path, console, decay_factory):
     image = decay_factory.open_image(image_path)
@@ -78,17 +79,19 @@ def process_image(image_path, console, decay_factory):
     decay_factory.convert_image(image, save_path=(save_path))
     console.print(f"✅ [bold green]Done![/] [green](saved at '{save_path}')[/]")
 
-def add_decay_palette(decay_factory):
 
+def add_decay_palette(decay_factory):
     decayPalette = ["#13171b","#171B20","#1a1e24","#21262e","#242931","#485263","#76b97f","#70a5eb","#c68aee","#74bee9","#dee1e6","#a9b1d6","#171a1f","#1c252c","#384148","#e05f65","#fc7b81","#78dba9","#94f7c5","#f1cf8a","#ffeba6","#8cc1ff","#e2a6ff","#90daff","#fafdff","#f5f5f5","#22262e"]
 
     for color in decayPalette:
         decay_factory.add_color_to_palette(color)
 
+
 ## handle CTRL + C
 def signal_handler(signal, frame):
     print()
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()
