@@ -12,8 +12,7 @@ decay on the right.
 ```
 pip3 install -r requirements.txt
 ```
-3. Edit the file ```conv.py``` line 14 with your user name, DO NOT CHANGE THE DIR, IT WILL NOT WORK AS EXPECTED, IF YOU WANT TO EDIT IT THEN DO IT IN BOTH ```conv.py``` and ```decay.sh```.
-4. Install it with:
+3. Install it with:
 ```
 sudo make install
 ```
