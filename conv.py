@@ -81,7 +81,7 @@ def process_image(image_path, console, decay_factory):
 
 
 def add_decay_palette(decay_factory):
-    decayPalette = ["#13171b","#171B20","#1a1e24","#21262e","#242931","#485263","#76b97f","#70a5eb","#c68aee","#74bee9","#dee1e6","#a9b1d6","#171a1f","#1c252c","#384148","#e05f65","#fc7b81","#78dba9","#94f7c5","#f1cf8a","#ffeba6","#8cc1ff","#e2a6ff","#90daff","#fafdff","#f5f5f5","#22262e"]
+    decayPalette = ["#13171b","#171B20","#1a1e24","#21262e","#242931","#485263","#76b97f","#c68aee","#74bee9","#dee1e6","#d4d7db","#a9b1d6","#171a1f","#1c252c","#384148","#e05f65","#fc7b81","#78dba9","#94f7c5","#f1cf8a","#ffeba6","#8cc1ff","#e2a6ff","#90daff","#fafdff","#f5f5f5","#22262e","#e5646a","#75aaf0","#cb8ff3","#79c3ee","#e3e6eb","#4e88d4","#5f94da","#70a5eb","#e6e8ec"]
 
     for color in decayPalette:
         decay_factory.add_color_to_palette(color)
