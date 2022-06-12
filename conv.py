@@ -10,17 +10,17 @@ from ImageGoNord import GoNord
 from rich.console import Console
 from rich.panel import Panel
 
-# CHANGE pirate TO YOUR OWN USER NAME, DO NOT CHANGE THE DIRECTORY ITSELF
-mypath="/home/faaris/Pictures/cat/"
+# CHANGE "faaris" TO YOUR OWN USER NAME, DO NOT CHANGE THE DIRECTORY ITSELF
+mypath="/home/faaris/Pictures/decay/"
 
 def main():
 
     signal.signal(signal.SIGINT, signal_handler)
     console = Console()
 
-    cat_factory = GoNord()
-    cat_factory.reset_palette()
-    add_cat_palette(cat_factory)
+    decay_factory = GoNord()
+    decay_factory.reset_palette()
+    add_decay_palette(decay_factory)
 
     # Checks if there's an argument
     if len(sys.argv) > 1:
@@ -30,7 +30,7 @@ def main():
 
     for image_path in image_paths:
         if os.path.isfile(image_path):
-            process_image(image_path, console, cat_factory)
+            process_image(image_path, console, decay_factory)
         else:
             console.print(
                 f"❌ [red]We had a problem in the pipeline! \nThe image at '{image_path}' could not be found! \nSkipping... [/]"
@@ -40,7 +40,7 @@ def main():
 # Gets the file path from the Argument
 def fromCommandArgument(console):
     command_parser = argparse.ArgumentParser(
-        description="A simple cli to manufacture Catppuccin themed wallpapers."
+        description="A simple cli to manufacture Decay themed wallpapers."
     )
     command_parser.add_argument(
         "Path", metavar="path", nargs="+", type=str, help="The path(s) to the image(s)."
@@ -54,7 +54,7 @@ def fromTui(console):
 
     console.print(
         Panel(
-            "🏭 [bold magenta] Catppuccin Factory [/] 🏭", expand=False, border_style="magenta"
+            "🏭 [bold magenta] Decay Factory [/] 🏭", expand=False, border_style="magenta"
         )
     )
 
@@ -65,25 +65,25 @@ def fromTui(console):
         ).split()
     ]
 
-def process_image(image_path, console, cat_factory):
-    image = cat_factory.open_image(image_path)
+def process_image(image_path, console, decay_factory):
+    image = decay_factory.open_image(image_path)
     
     console.print(f"🔨 [blue]manufacturing '{os.path.basename(image_path)}'...[/]")
 
     # TODO: might be a better idea to save the new Image in the same directory the command is being run from
     save_path = os.path.join(
-        mypath, "cat_" + os.path.basename(image_path)
+        mypath, "decay_" + os.path.basename(image_path)
     )
 
-    cat_factory.convert_image(image, save_path=(save_path))
+    decay_factory.convert_image(image, save_path=(save_path))
     console.print(f"✅ [bold green]Done![/] [green](saved at '{save_path}')[/]")
 
-def add_cat_palette(cat_factory):
+def add_decay_palette(decay_factory):
 
-    catPalette = ["#F2CDCD","#DDB6F2","#F5C2E7","#E8A2AF","#F28FAD","#F8BD96","#FAE3B0","#ABE9B3","#B5E8E0","#96CDFB","#89DCEB","#161320","#1A1826","#1E1E2E","#302D41","#575268","#6E6C7E","#988BA2","#C3BAC6","#D9E0EE","#C9CBFF","#F5E0DC"]
+    decayPalette = ["#13171b","#171B20","#1a1e24","#21262e","#242931","#485263","#76b97f","#70a5eb","#c68aee","#74bee9","#dee1e6","#a9b1d6","#171a1f","#1c252c","#384148","#e05f65","#fc7b81","#78dba9","#94f7c5","#f1cf8a","#ffeba6","#8cc1ff","#e2a6ff","#90daff","#fafdff","#f5f5f5","#22262e"]
 
-    for color in catPalette:
-        cat_factory.add_color_to_palette(color)
+    for color in decayPalette:
+        decay_factory.add_color_to_palette(color)
 
 ## handle CTRL + C
 def signal_handler(signal, frame):

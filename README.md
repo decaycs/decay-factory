@@ -1,7 +1,6 @@
-# 🗼Catppuccin Factory 🏭
-Forked from [tokyo-night-factory](https://github.com/rototrash/tokyo-night-factory) 😄
+# 🗼Decay Factory 🏭
 
-A simple cli to convert any image to a catppuccin themed wallpaper
+A simple cli to convert any image to a Decay themed wallpaper
 
 ![example](./example.png)
 
@@ -11,7 +10,7 @@ A simple cli to convert any image to a catppuccin themed wallpaper
 ```
 pip3 install rich image-go-nord argparse
 ```
-3. Edit the file ```conv.py``` line 14 with your user name, DO NOT CHANGE THE DIR, IT WILL NOT WORK AS EXPECTED, IF YOU WANT TO EDIT IT THEN DO IT IN BOTH ```conv.py``` and ```cat.sh```.
+3. Edit the file ```conv.py``` line 14 with your user name, DO NOT CHANGE THE DIR, IT WILL NOT WORK AS EXPECTED, IF YOU WANT TO EDIT IT THEN DO IT IN BOTH ```conv.py``` and ```decay.sh```.
 4. Install it with:
 ```
 sudo make install
@@ -20,14 +19,14 @@ sudo make install
 ## Usage
 from your terminal run:
 ```
-catFactory
+decayFactory
 ```
 or
 ```
-catFactory /path/to/image/
+decayFactory /path/to/image/
 ```
 
- All the outputs will be in ~/Pictures/cat
+ All the outputs will be in ~/Pictures/decay
 
  ## UNINSTALL
  1. ```cd``` into the repo folder.
@@ -38,5 +37,5 @@ catFactory /path/to/image/
 
 
  ## Credits
-- **Made** with [Schrodinger-Hat's ImageGoNord](https://github.com/Schrodinger-Hat), but with the Onedark palette
+- **Made** with [Schrodinger-Hat's ImageGoNord](https://github.com/Schrodinger-Hat), but with the Decay palette
 - **Text User Interface (TUI)** made with [rich](https://github.com/willmcgugan/rich)
