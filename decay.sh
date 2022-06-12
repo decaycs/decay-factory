@@ -1,14 +1,10 @@
 #!/bin/bash
 
-if [[ -d /home/$USER/Pictures/decay ]]; then
-  echo "AWESOME! dir [~/Pictures/decay] already exists."
-else
-  mkdir /home/$USER/Pictures/decay
+PICTURES_PATH=$HOME/Pictures/decay
+
+if ! test -d $PICTURES_PATH; then
+  mkdir $PICTURES_PATH
   echo "dir [~/Pictures/decay] has been created successfully!"
 fi
 
-if [[ -z $1 ]]; then
-  decayFactorypy
-else
-  decayFactorypy $1
-fi
+decayFactorypy ${@}
