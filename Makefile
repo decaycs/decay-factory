@@ -13,4 +13,4 @@ install:
 
 uninstall:
 	@rm -rf $(DESTDIR)$(PREFIX)/bin/decayFactory
-	@rm -rf $(DESTDIR)$(PREFIX)/bin/decayFactory
+	@rm -rf $(DESTDIR)$(PREFIX)/bin/decayFactorypy
