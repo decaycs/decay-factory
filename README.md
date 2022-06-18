@@ -7,6 +7,21 @@ A simple cli to convert any image to a Decay themed wallpaper
 decay on the right.
 
 ## Installation
+
+### AUR
+
+You can install decay-factory using our AUR decay-factory package:
+
+```sh
+yay -S decay-factory
+```
+
+> You can use any AUR helper :)
+
+### Manually
+
+You can install decay-factory manually
+
 1. Clone the repo.
 2. Install the required packages using pip as shown below:
 ```
