@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 PICTURES_PATH=$HOME/Pictures/decay
 
