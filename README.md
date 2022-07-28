@@ -6,6 +6,10 @@ A simple cli to convert any image to a Decay themed wallpaper
 ![example2](./2.jpg)
 decay on the right.
 
+## Alternatives
+
+- [dye](https://github.com/Infinitybeond1/dye): Dye is a ultrafast image colorizer tool that supports decay palette, you can try it too!
+
 ## Installation
 
 ### AUR
