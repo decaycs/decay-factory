@@ -8,7 +8,7 @@ decay on the right.
 
 ## Alternatives
 
-- [dye](https://github.com/Infinitybeond1/dye): Dye is a ultrafast image colorizer tool that supports decay palette, you can try it too!
+- [dye](https://github.com/Infinitybeond1/dye): Dye is an ultrafast image colorizer tool that supports decay palette, you can try it too!
 
 ## Installation
 
