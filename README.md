@@ -35,6 +35,14 @@ pip3 install -r requirements.txt
 ```
 sudo make install
 ```
+## Installing on NixOS
+In order to install decay-factory on NixOS, add to your packages list in configuration.nix in order to be able to run decay-factory
+```
+python310Packages.rich
+python310Packages.image-go-nord
+```
+
+
 
 ## Usage
 from your terminal run:
